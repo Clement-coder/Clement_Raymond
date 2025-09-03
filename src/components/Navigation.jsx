@@ -155,10 +155,10 @@ const Navigation = () => {
             }}
             className={`relative text-left text-lg font-medium px-4 py-2 transition-all duration-300 rounded-lg
               ${activeSection === item.id
-                ? 'text-cyan-400 font-bold bg-cyan-500/10 dark:bg-cyan-400/10'
+                ? 'text-cyan-400 font-bold bg-cyan-500/10 dark:bg-cyan-400/40'
                 : darkMode
-                  ? 'text-gray-200 hover:text-cyan-400 hover:bg-cyan-500/10'
-                  : 'text-gray-800 hover:text-purple-500 hover:bg-purple-500/10'
+                  ? 'text-gray-200 hover:text-cyan-400 hover:bg-cyan-500/40'
+                  : 'text-gray-800 hover:text-purple-500 hover:bg-purple-500/40'
               }`}
             whileHover={{ scale: 1.05, x: 5 }}
             whileTap={{ scale: 0.95 }}

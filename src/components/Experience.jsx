@@ -46,7 +46,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className={`py-20 ${darkMode ? 'bg-black' : 'bg-gray-100'}  relative overflow-hidden`}>
+    <section id="experience" className={`py-20 ${darkMode ? 'bg-black' : 'bg-gray-100'} relative overflow-hidden`}>
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/20 via-transparent to-purple-500/20"></div>
@@ -60,7 +60,7 @@ const Experience = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 
+          <h2
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
             style={{ fontFamily: 'Orbitron, monospace' }}
           >
@@ -70,8 +70,8 @@ const Experience = () => {
         </motion.div>
 
         <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-purple-500 to-cyan-500 transform md:-translate-x-px"></div>
+          {/* Timeline Line - only on md+ screens */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-purple-500 to-cyan-500 transform -translate-x-1/2"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -80,14 +80,12 @@ const Experience = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`relative flex flex-col md:flex-row items-start ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className="relative flex flex-col md:flex-row md:items-start"
               >
                 {/* Timeline Node */}
                 <motion.div
-                  className="absolute left-8 md:left-1/2 w-4 h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full transform -translate-x-2 md:-translate-x-2 z-10"
-                  whileInView={{ 
+                  className="absolute md:left-1/2 left-8 top-0 w-4 h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full transform -translate-x-2 z-10"
+                  whileInView={{
                     scale: [1, 1.5, 1],
                     boxShadow: [
                       '0 0 0 0 rgba(6, 182, 212, 0.7)',
@@ -102,8 +100,8 @@ const Experience = () => {
 
                 {/* Content Card */}
                 <motion.div
-                  className={`w-full md:w-5/12 ml-16 md:ml-0 bg-gradient-to-r from-purple-300/10 via-cyan-500/10 to-purple-500/10 ${
-                    index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
+                  className={`w-full md:w-5/12 mt-8 md:mt-0 ${
+                    index % 2 === 0 ? 'md:ml-8 md:mr-auto' : 'md:mr-8 md:ml-auto'
                   }`}
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
@@ -116,7 +114,7 @@ const Experience = () => {
                       {/* Company Header */}
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h3 
+                          <h3
                             className={`text-xl font-bold mb-1 ${darkMode ? 'text-white' : 'text-gray-900'}`}
                             style={{ fontFamily: 'Audiowide, cursive' }}
                           >
