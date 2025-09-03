@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Code, Database, Cpu, Cloud, Server } from 'lucide-react';
 import { ThemeContext } from '../ThemeContext';
+import Logo from '../assets/clement_raymond_logo.png';
+
 
 const Footer = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -53,7 +55,7 @@ const Footer = () => {
   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
 >
   <img
-    src="src/assets/clement_raymond_logo.png"
+    src={Logo}
     alt="Clement Raymond Logo"
     className="w-full h-full object-contain"
   />

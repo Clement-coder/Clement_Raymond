@@ -3,6 +3,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { ThemeContext } from '../ThemeContext';
+import Logo from '../assets/clement_raymond_logo.png';
+
 
 const Navigation = () => {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
@@ -52,7 +54,7 @@ const Navigation = () => {
   style={{ fontFamily: 'Orbitron, monospace' }}
 >
   <img
-    src="src/assets/clement_raymond_logo.png"
+    src={Logo}
     alt="Clement Raymond Logo"
     className="w-full h-auto object-contain"
   />
