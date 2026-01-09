@@ -9,54 +9,118 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Cash-Hub',
-      description: 'A banking app to send and receive money between users, fully built with JavaScript and localStorage.',
-      image: 'https://images.pexels.com/photos/4386430/pexels-photo-4386430.jpeg',
-      tags: ['JavaScript', 'localStorage', 'Frontend', 'Backend'],
+      title: 'Foodra Platform',
+      description: 'Foodra is a decentralized agricultural platform using blockchain, AI, and digital finance to empower farmers with identity, credit, inputs, training, insurance, and market access.',
+      tags: ['Blockchain', 'Web3', 'AgriTech', 'Next.js', 'Smart Contracts'],
+      image: 'https://images.pexels.com/photos/1122861/pexels-photo-1122861.jpeg',
       icon: Database,
-      gradient: 'from-cyan-500 to-purple-600'
+      gradient: 'from-green-500 to-teal-600',
+      github: 'https://github.com/Clement-coder/foodra-platform',
+      live: 'https://foodra-platform.vercel.app/'
     },
     {
       id: 2,
-      title: 'FakeStore E-commerce',
-      description: 'An online store using fakestoreapi.com products with add to cart, update, remove, and clear cart functionalities.',
+      title: 'FansOnly',
+      description: 'Decentralized loyalty platform for creators, artists, and influencers to connect with fans through exclusive content, experiences, and token-based rewards.',
+      tags: ['Web3', 'Creators', 'NFTs', 'Smart Contracts'],
       image: 'https://images.pexels.com/photos/3945685/pexels-photo-3945685.jpeg',
-      tags: ['JavaScript', 'HTML', 'CSS', 'LocalStorage'],
-      icon: Code,
-      gradient: 'from-purple-500 to-pink-600'
+      icon: Globe,
+      gradient: 'from-purple-500 to-pink-600',
+      github: 'https://github.com/Clement-coder/FansOnly',
+      live: 'https://fans-only-kd4t.vercel.app/'
     },
     {
       id: 3,
-      title: 'Portfolio Website',
-      description: 'My futuristic portfolio website showcasing projects, skills, and animations using React and Tailwind CSS.',
-      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg',
-      tags: ['React', 'Tailwind', 'Framer Motion', 'Frontend'],
-      icon: Globe,
-      gradient: 'from-green-500 to-teal-600'
+      title: 'Cipherlink',
+      description: 'Lightweight web app enabling secure encryption, sharing, and decryption of messages with local history tracking and a clean, modern interface.',
+      tags: ['Encryption', 'Web App', 'React', 'LocalStorage'],
+      image: 'https://images.pexels.com/photos/4386430/pexels-photo-4386430.jpeg',
+      icon: Code,
+      gradient: 'from-cyan-500 to-purple-500',
+      github: 'https://github.com/Clement-coder/cipherlink',
+      live: 'https://cipherlink-delta.vercel.app/'
     },
     {
       id: 4,
-      title: 'Web3 Test Project',
-      description: 'Next.js + Tailwind CSS Web3 project built with App Router, demonstrating blockchain interactions and smart contract calls.',
+      title: 'Offramp API',
+      description: 'Scalable backend API for crypto-to-fiat off-ramp services, handling rates, providers, notifications, and transaction status.',
+      tags: ['Backend', 'API', 'Crypto', 'Node.js'],
       image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
-      tags: ['Next.js', 'Tailwind', 'Web3', 'Smart Contracts'],
       icon: Database,
-      gradient: 'from-orange-500 to-red-600'
+      gradient: 'from-orange-500 to-red-600',
+      github: 'https://github.com/Clement-coder/offramp-api',
+      live: 'https://offramp-api.vercel.app/'
     },
     {
       id: 5,
-      title: 'Yield MVP',
-      description: 'Decentralized agro-finance platform connecting Nigerian farmers with investors, milestone-based disbursements via smart contracts.',
+      title: 'Car Dealer NFT Marketplace',
+      description: 'Decentralized car dealership marketplace where dealers and buyers trade vehicles as NFTs, with smart contracts and responsive React + Tailwind frontend.',
+      tags: ['NFTs', 'Marketplace', 'React', 'Smart Contracts'],
+      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg',
+      icon: Database,
+      gradient: 'from-cyan-500 to-purple-600',
+      github: 'https://github.com/Clement-coder/car-dealer-nft-marketplace',
+      live: ''
+    },
+    {
+      id: 6,
+      title: 'RecurChain',
+      description: 'Decentralized automation system for real-world recurring payments using USDC on Base. Walletless login and autonomous payment agents.',
+      tags: ['Web3', 'Crypto Payments', 'Next.js', 'Smart Contracts'],
       image: 'https://images.pexels.com/photos/1122861/pexels-photo-1122861.jpeg',
-      tags: ['Solidity', 'React', 'Ethers.js', 'Blockchain'],
       icon: Code,
-      gradient: 'from-cyan-500 to-purple-500'
+      gradient: 'from-purple-500 to-pink-600',
+      github: 'https://github.com/Clement-coder/recurchain',
+      live: 'https://recurchain.vercel.app/'
+    },
+    {
+      id: 7,
+      title: 'Web3 Contract Collection',
+      description: 'Collection of production-grade Solidity contracts: Student System, Hospital Manager, Bank DeFi Module, DAO Voting, built with Hardhat, Ignition, OpenZeppelin.',
+      tags: ['Solidity', 'Smart Contracts', 'Blockchain', 'Hardhat'],
+      image: 'https://images.pexels.com/photos/4386430/pexels-photo-4386430.jpeg',
+      icon: Code,
+      gradient: 'from-green-500 to-teal-600',
+      github: 'https://github.com/Clement-coder/web3-contract-collection',
+      live: ''
+    },
+    {
+      id: 8,
+      title: 'AxiomSphere',
+      description: 'Decentralized AI agent platform. Deploy autonomous agents, automate tasks, track micropayments, manage wallets, and monitor activity seamlessly.',
+      tags: ['AI', 'Web3', 'Automation', 'Smart Contracts'],
+      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
+      icon: Globe,
+      gradient: 'from-orange-500 to-red-600',
+      github: 'https://github.com/Clement-coder/AxiomSphere',
+      live: 'https://axiom-sphere.vercel.app/'
+    },
+    {
+      id: 9,
+      title: 'CropTrust',
+      description: 'Modern agriculture marketplace bridging farmers and buyers through trust, transparency, and seamless interaction with a futuristic, calm design.',
+      tags: ['AgriTech', 'Web3', 'Marketplace', 'Blockchain'],
+      image: 'https://images.pexels.com/photos/1122861/pexels-photo-1122861.jpeg',
+      icon: Database,
+      gradient: 'from-cyan-500 to-purple-500',
+      github: '',
+      live: 'https://crop-trust.vercel.app/'
+    },
+    {
+      id: 10,
+      title: 'ReTrust Marketplace',
+      description: 'Decentralized second-hand product marketplace built on Web3 using escrow smart contracts for trust, transparency, and fraud-free trading.',
+      tags: ['Web3', 'Marketplace', 'Smart Contracts', 'React'],
+      image: 'https://images.pexels.com/photos/3945685/pexels-photo-3945685.jpeg',
+      icon: Globe,
+      gradient: 'from-purple-500 to-pink-600',
+      github: 'https://github.com/Clement-coder/retrust-marketplace',
+      live: ''
     }
   ];
 
   return (
     <section id="projects" className={`py-20 ${darkMode ? 'bg-black' : 'bg-gray-100'} relative overflow-hidden`}>
-      {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl opacity-20"></div>
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl opacity-20"></div>
@@ -87,15 +151,12 @@ const Projects = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="relative group"
             >
-              {/* Project Card */}
               <motion.div
                 className={`relative h-full ${darkMode ? 'bg-black/40' : 'bg-white/20'} backdrop-blur-lg bg-gradient-to-r from-purple-300/10 via-cyan-500/10 to-purple-500/10 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/40 transition-all duration-300`}
                 whileHover={{ scale: 1.02 }}
               >
-                {/* Glowing Border Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-300"></div>
                 
-                {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img 
                     src={project.image} 
@@ -104,7 +165,6 @@ const Projects = () => {
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-60`}></div>
                   
-                  {/* Floating Icon */}
                   <motion.div
                     className="absolute top-4 right-4 p-3 bg-black/30 backdrop-blur-sm rounded-lg border border-cyan-500/30 ease-in-out duration-200"
                     whileHover={{ rotate: 180 }}
@@ -114,7 +174,6 @@ const Projects = () => {
                   </motion.div>
                 </div>
 
-                {/* Project Content */}
                 <div className="p-6 relative">
                   <h3 
                     className={`text-xl font-bold mb-3 transition-colors ${darkMode ? 'text-white group-hover:text-cyan-400' : 'text-gray-900 group-hover:text-blue-600'}`}
@@ -126,7 +185,6 @@ const Projects = () => {
                     {project.description}
                   </p>
                   
-                  {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag, tagIndex) => (
                       <span
@@ -142,29 +200,38 @@ const Projects = () => {
                     ))}
                   </div>
                   
-                  {/* Action Buttons */}
                   <div className="flex space-x-4">
-                    <motion.button
-                      className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span>Live Demo</span>
-                    </motion.button>
+                    {project.live && (
+                      <motion.a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        <span>Live Demo</span>
+                      </motion.a>
+                    )}
                     
-                    <motion.button
-                      className={`flex items-center space-x-2 px-4 py-2 border font-medium rounded-lg transition-all duration-300 ${
-                        darkMode 
-                        ? 'border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-500'
-                        : 'border-blue-300/30 text-blue-700 hover:bg-blue-200/20 hover:border-blue-400'
-                      }`}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Github className="w-4 h-4" />
-                      <span>Code</span>
-                    </motion.button>
+                    {project.github && (
+                      <motion.a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex items-center space-x-2 px-4 py-2 border font-medium rounded-lg transition-all duration-300 ${
+                          darkMode 
+                          ? 'border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-500'
+                          : 'border-blue-300/30 text-blue-700 hover:bg-blue-200/20 hover:border-blue-400'
+                        }`}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Github className="w-4 h-4" />
+                        <span>Code</span>
+                      </motion.a>
+                    )}
                   </div>
                 </div>
               </motion.div>
