@@ -103,7 +103,7 @@ const Projects = () => {
       image: 'https://images.pexels.com/photos/1122861/pexels-photo-1122861.jpeg',
       icon: Database,
       gradient: 'from-cyan-500 to-purple-500',
-      github: '',
+      github: 'https://github.com/Clement-coder/Crop-Trust',
       live: 'https://crop-trust.vercel.app/'
     },
     {
