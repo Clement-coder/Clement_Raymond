@@ -2,6 +2,13 @@ import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Database, Globe, Code } from 'lucide-react';
 import { ThemeContext } from '../ThemeContext';
+import FoodraImage from '../assets/foodra.png';
+import FansOnlyImage from '../assets/fansOnly.png';
+import CipherlinkImage from '../assets/cipherlink.png';
+import OfframpImage from '../assets/offramp_1.png';
+import RecurchainImage from '../assets/recurchain.png';
+import AxiomsphereImage from '../assets/Axiomsphere.png';
+import CroptrustImage from '../assets/croptrust.png';
 
 const Projects = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -12,7 +19,7 @@ const Projects = () => {
       title: 'Foodra Platform',
       description: 'Foodra is a decentralized agricultural platform using blockchain, AI, and digital finance to empower farmers with identity, credit, inputs, training, insurance, and market access.',
       tags: ['Blockchain', 'Web3', 'AgriTech', 'Next.js', 'Smart Contracts'],
-      image: 'https://images.pexels.com/photos/1122861/pexels-photo-1122861.jpeg',
+      image: FoodraImage,
       icon: Database,
       gradient: 'from-green-500 to-teal-600',
       github: 'https://github.com/Clement-coder/foodra-platform',
@@ -23,7 +30,7 @@ const Projects = () => {
       title: 'FansOnly',
       description: 'Decentralized loyalty platform for creators, artists, and influencers to connect with fans through exclusive content, experiences, and token-based rewards.',
       tags: ['Web3', 'Creators', 'NFTs', 'Smart Contracts'],
-      image: 'https://images.pexels.com/photos/3945685/pexels-photo-3945685.jpeg',
+      image: FansOnlyImage,
       icon: Globe,
       gradient: 'from-purple-500 to-pink-600',
       github: 'https://github.com/Clement-coder/FansOnly',
@@ -34,7 +41,7 @@ const Projects = () => {
       title: 'Cipherlink',
       description: 'Lightweight web app enabling secure encryption, sharing, and decryption of messages with local history tracking and a clean, modern interface.',
       tags: ['Encryption', 'Web App', 'React', 'LocalStorage'],
-      image: 'https://images.pexels.com/photos/4386430/pexels-photo-4386430.jpeg',
+      image: CipherlinkImage,
       icon: Code,
       gradient: 'from-cyan-500 to-purple-500',
       github: 'https://github.com/Clement-coder/cipherlink',
@@ -45,7 +52,7 @@ const Projects = () => {
       title: 'Offramp API',
       description: 'Scalable backend API for crypto-to-fiat off-ramp services, handling rates, providers, notifications, and transaction status.',
       tags: ['Backend', 'API', 'Crypto', 'Node.js'],
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
+      image: OfframpImage,
       icon: Database,
       gradient: 'from-orange-500 to-red-600',
       github: 'https://github.com/Clement-coder/offramp-api',
@@ -67,7 +74,7 @@ const Projects = () => {
       title: 'RecurChain',
       description: 'Decentralized automation system for real-world recurring payments using USDC on Base. Walletless login and autonomous payment agents.',
       tags: ['Web3', 'Crypto Payments', 'Next.js', 'Smart Contracts'],
-      image: 'https://images.pexels.com/photos/1122861/pexels-photo-1122861.jpeg',
+      image: RecurchainImage,
       icon: Code,
       gradient: 'from-purple-500 to-pink-600',
       github: 'https://github.com/Clement-coder/recurchain',
@@ -89,7 +96,7 @@ const Projects = () => {
       title: 'AxiomSphere',
       description: 'Decentralized AI agent platform. Deploy autonomous agents, automate tasks, track micropayments, manage wallets, and monitor activity seamlessly.',
       tags: ['AI', 'Web3', 'Automation', 'Smart Contracts'],
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
+      image: AxiomsphereImage,
       icon: Globe,
       gradient: 'from-orange-500 to-red-600',
       github: 'https://github.com/Clement-coder/AxiomSphere',
@@ -100,7 +107,7 @@ const Projects = () => {
       title: 'CropTrust',
       description: 'Modern agriculture marketplace bridging farmers and buyers through trust, transparency, and seamless interaction with a futuristic, calm design.',
       tags: ['AgriTech', 'Web3', 'Marketplace', 'Blockchain'],
-      image: 'https://images.pexels.com/photos/1122861/pexels-photo-1122861.jpeg',
+      image: CroptrustImage,
       icon: Database,
       gradient: 'from-cyan-500 to-purple-500',
       github: 'https://github.com/Clement-coder/Crop-Trust',
@@ -161,9 +168,9 @@ const Projects = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-60`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-30`}></div>
                   
                   <motion.div
                     className="absolute top-4 right-4 p-3 bg-black/30 backdrop-blur-sm rounded-lg border border-cyan-500/30 ease-in-out duration-200"
