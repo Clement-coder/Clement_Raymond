@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Code, Database, Cpu, Cloud, Server } from 'lucide-react';
 import { ThemeContext } from '../ThemeContext';
+import ClementCV from '../assets/ClementCV.pdf';
 
 const Hero = () => {
   const { darkMode } = useContext(ThemeContext); // get darkMode from context
@@ -168,7 +169,9 @@ const Hero = () => {
               <span className="relative z-10">View My Work</span>
             </motion.button>
 
-            <motion.button
+            <motion.a
+              href={ClementCV}
+              download="ClementCV.pdf"
               className={`relative px-8 py-4 font-semibold rounded-lg transition-all duration-300 ${
                 darkMode
                   ? 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
@@ -178,7 +181,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
             >
               Download CV
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </div>
