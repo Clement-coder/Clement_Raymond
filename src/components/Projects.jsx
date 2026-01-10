@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import ProjectModal from './ProjectModal';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Database, Globe, Code } from 'lucide-react';
 import { ThemeContext } from '../ThemeContext';
@@ -12,6 +13,18 @@ import CroptrustImage from '../assets/croptrust.png';
 
 const Projects = () => {
   const { darkMode } = useContext(ThemeContext);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
 
   const projects = [
     {
@@ -156,7 +169,8 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="relative group"
+              className="relative group cursor-pointer"
+              onClick={() => openModal(project)}
             >
               <motion.div
                 className={`relative h-full ${darkMode ? 'bg-black/40' : 'bg-white/20'} backdrop-blur-lg bg-gradient-to-r from-purple-300/10 via-cyan-500/10 to-purple-500/10 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/40 transition-all duration-300`}
@@ -246,6 +260,13 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        darkMode={darkMode}
+      />
     </section>
   );
 };
