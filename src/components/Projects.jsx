@@ -10,6 +10,7 @@ import OfframpImage from '../assets/offramp_1.png';
 import RecurchainImage from '../assets/recurchain.png';
 import AxiomsphereImage from '../assets/Axiomsphere.png';
 import CroptrustImage from '../assets/croptrust.png';
+import KezoImage from '../assets/kezo.png'
 
 const Projects = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -136,6 +137,17 @@ const Projects = () => {
       gradient: 'from-purple-500 to-pink-600',
       github: 'https://github.com/Clement-coder/retrust-marketplace',
       live: ''
+    },
+        {
+      id: 11,
+      title: 'Kzo Gasless Wallet',
+      description: "Kezo is a Starknet-native gasless wallet enabling frictionless on-chain transactions, powered by Account Abstraction and a secure relayer-paymaster system for seamless onboarding and user-friendly Web3 experiences.",
+      tags: ['Web3', 'Crypto Payments', 'Next.js', 'Smart Contracts'],
+      image: KezoImage,
+      icon: Globe,
+      gradient: 'from-purple-500 to-pink-600',
+      github: 'https://github.com/Clement-coder/Kezo-Gasless-Wallet',
+      live: 'https://kezo-gasless-wallet.vercel.app/'
     }
   ];
 
