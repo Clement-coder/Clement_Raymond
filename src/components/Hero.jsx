@@ -124,7 +124,9 @@ const Hero = () => {
                     duration: 0.8,
                     delay: index * 0.1,
                     type: "spring",
-                    stiffness: 100
+                    stiffness: 100,
+                    repeat: Infinity,
+                    repeatDelay: 2
                   }}
                   whileHover={{
                     scale: 1.2,
