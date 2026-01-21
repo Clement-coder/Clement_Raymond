@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Code, Database, Cpu, Cloud, Server } from 'lucide-react';
 import { ThemeContext } from '../ThemeContext';
-import ClementCV from '../assets/ClementCV.pdf';
+import ClementCV from '../assets/Clement_Raymond_CV.pdf';
 
 const Hero = () => {
   const { darkMode } = useContext(ThemeContext); // get darkMode from context
@@ -156,6 +156,7 @@ const Hero = () => {
           {/* Buttons */}
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }} className="flex flex-col sm:flex-row gap-6 justify-center">
             <motion.button
+              onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
               className="relative px-8 py-4 font-semibold rounded-lg overflow-hidden group"
               style={{
                 background: darkMode
@@ -171,7 +172,7 @@ const Hero = () => {
 
             <motion.a
               href={ClementCV}
-              download="ClementCV.pdf"
+              download="Clement_Raymond_CV.pdf"
               className={`relative px-8 py-4 font-semibold rounded-lg transition-all duration-300 ${
                 darkMode
                   ? 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
