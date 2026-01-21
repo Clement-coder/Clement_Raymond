@@ -19,7 +19,7 @@ const Hero = () => {
     <section
       id="hero"
       className={`min-h-screen relative overflow-hidden transition-colors duration-500 ${
-        darkMode ? 'bg-black' : 'bg-white'
+        darkMode ? 'bg-slate-900' : 'bg-slate-100'
       }`}
     >
       {/* Animated Background Grid */}
@@ -105,15 +105,32 @@ const Hero = () => {
           {/* Main Hero Text */}
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             <h1
-              className="text-6xl md:text-8xl font-bold mb-4 bg-clip-text text-transparent"
-              style={{
-                fontFamily: 'Orbitron, monospace',
-                backgroundImage: darkMode
-                  ? 'linear-gradient(to right, #00fff0, #a855f7, #f472b6)'
-                  : 'linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899)',
-              }}
+              className={`text-6xl md:text-8xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-slate-800'}`}
+              style={{ fontFamily: 'Orbitron, monospace' }}
             >
-              Clement Raymond
+              {"Clement Raymond".split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, y: 50, rotateX: -90 }}
+                  animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.1,
+                    type: "spring",
+                    stiffness: 100
+                  }}
+                  whileHover={{
+                    scale: 1.2,
+                    rotateY: 360,
+                    color: darkMode ? "#ffffff" : "#1e293b",
+                    transition: { duration: 0.3 }
+                  }}
+                  className="inline-block cursor-pointer"
+                  style={{ transformOrigin: "center" }}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
             </h1>
           </motion.div>
 
@@ -157,13 +174,7 @@ const Hero = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }} className="flex flex-col sm:flex-row gap-6 justify-center">
             <motion.button
               onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
-              className="relative px-8 py-4 font-semibold rounded-lg overflow-hidden group"
-              style={{
-                background: darkMode
-                  ? 'linear-gradient(to right, #00fff0, #a855f7)'
-                  : 'linear-gradient(to right, #3b82f6, #8b5cf6)',
-                color: '#fff',
-              }}
+              className="glass-button relative px-8 py-4 font-semibold text-white"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -173,12 +184,8 @@ const Hero = () => {
             <motion.a
               href={ClementCV}
               download="Clement_Raymond_CV.pdf"
-              className={`relative px-8 py-4 font-semibold rounded-lg transition-all duration-300 ${
-                darkMode
-                  ? 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
-                  : 'border-2 border-purple-500 text-purple-500 hover:bg-purple-200/20'
-              }`}
-              whileHover={{ scale: 1.05, boxShadow: darkMode ? '0 0 20px rgba(0,255,255,0.5)' : '0 0 20px rgba(139,92,246,0.3)' }}
+              className="glass-button relative px-8 py-4 font-semibold text-white"
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Download CV

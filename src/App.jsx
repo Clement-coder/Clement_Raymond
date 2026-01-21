@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeContext } from "./ThemeContext";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -10,35 +11,29 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  const { darkMode } = useContext(ThemeContext);
   useEffect(() => {
-const handleSmoothScroll = (e) => {
-  const target = e.target;
-
-  if (!target) return;
-
-  const anchor = target.closest("a");
-
-  if (anchor && anchor.hash) {
-    e.preventDefault();
-    const element = document.querySelector(anchor.hash);
-    element?.scrollIntoView({ behavior: "smooth" });
-  }
-};
-
-
-
-
+    const handleSmoothScroll = (e) => {
+      const target = e.target;
+      if (!target) return;
+      const anchor = target.closest("a");
+      if (anchor && anchor.hash) {
+        e.preventDefault();
+        const element = document.querySelector(anchor.hash);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }
+    };
 
     document.addEventListener("click", handleSmoothScroll);
     return () => document.removeEventListener("click", handleSmoothScroll);
   }, []);
 
   return (
-    <div className="bg-black text-white overflow-x-hidden">
+    <div className={`${darkMode ? 'bg-slate-900' : 'bg-slate-100'} text-white overflow-x-hidden min-h-screen`}>
       {/* Loading Animation */}
       <AnimatePresence>
         <motion.div
-          className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+          className="fixed inset-0 z-50 backdrop-blur-xl bg-slate-900/90 flex items-center justify-center"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
@@ -46,23 +41,18 @@ const handleSmoothScroll = (e) => {
           style={{ pointerEvents: "none" }}
         >
           <motion.div
-            className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
-            style={{ fontFamily: "Orbitron, monospace" }}
+            className="text-4xl font-bold text-white"
+            style={{ fontFamily: "system-ui, sans-serif" }}
             animate={{
-              scale: [1, 1.1, 1],
-              opacity: [0.5, 1, 0.5],
+              scale: [1, 1.05, 1],
+              opacity: [0.7, 1, 0.7],
             }}
             transition={{ duration: 1, repeat: 2 }}
           >
-            INITIALIZING...
+            LOADING...
           </motion.div>
         </motion.div>
       </AnimatePresence>
-
-      {/* Cursor Trail Effect */}
-      <div className="fixed inset-0 pointer-events-none z-40">
-        <div className="absolute inset-0 bg-gradient-radial from-cyan-500/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-      </div>
 
       {/* Main Content */}
       <Navigation />
@@ -82,9 +72,9 @@ const handleSmoothScroll = (e) => {
         transition={{ delay: 2, duration: 0.5 }}
       >
         <motion.button
-          className="p-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          className="glass-button p-4 text-white rounded-full shadow-glass"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <svg

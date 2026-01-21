@@ -140,7 +140,7 @@ const Projects = () => {
     },
         {
       id: 11,
-      title: 'Kzo Gasless Wallet',
+      title: 'Kizo Gasless Wallet',
       description: "Kezo is a Starknet-native gasless wallet enabling frictionless on-chain transactions, powered by Account Abstraction and a secure relayer-paymaster system for seamless onboarding and user-friendly Web3 experiences.",
       tags: ['Web3', 'Crypto Payments', 'Next.js', 'Smart Contracts'],
       image: KezoImage,
@@ -239,7 +239,7 @@ const Projects = () => {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                        className="glass-button flex items-center space-x-2 px-4 py-2 text-white font-medium"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >

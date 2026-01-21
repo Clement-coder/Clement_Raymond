@@ -90,7 +90,7 @@ const Contact = () => {
                   {contactInfo.map((info, idx) => (
                     <motion.a key={idx} href={info.href} target="_blank" rel="noopener noreferrer"
                       className={`flex items-center space-x-4 p-4 rounded-lg transition-all duration-300 group ${darkMode ? 'hover:bg-cyan-500/10' : 'hover:bg-gray-300/20'}`} whileHover={{ x: 10 }}>
-                      <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg">
+                      <div className="glass-button p-3">
                         <info.Icon className="w-5 h-5 text-white" />
                       </div>
                       <div>
@@ -164,7 +164,7 @@ const Contact = () => {
                 <motion.button
                   type="submit"
                   disabled={sending}
-                  className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 group"
+                  className="glass-button w-full flex items-center justify-center space-x-2 px-6 py-4 text-white font-semibold group"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

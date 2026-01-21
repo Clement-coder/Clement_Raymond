@@ -80,7 +80,7 @@ const ProjectModal = ({ project, isOpen, onClose, darkMode }) => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                  className="glass-button flex items-center space-x-2 px-4 py-2 text-white font-medium"
                 >
                   <ExternalLink className="w-4 h-4" />
                   <span>Live Demo</span>
