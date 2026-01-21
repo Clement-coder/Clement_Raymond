@@ -75,8 +75,15 @@ const Hero = () => {
         />
       ))}
 
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-2 sm:px-4">
-        <div className="text-center max-w-4xl w-full overflow-hidden">
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-1 sm:px-4">
+        <div className="text-center max-w-4xl w-full">
+          <style jsx>{`
+            @media (max-width: 640px) {
+              h1 {
+                font-size: clamp(1.5rem, 8vw, 3rem) !important;
+              }
+            }
+          `}</style>
           {/* Floating Tech Icons */}
           <div className="absolute inset-0 pointer-events-none">
             {floatingIcons.map(({ Icon, delay }, index) => (
@@ -105,8 +112,8 @@ const Hero = () => {
           {/* Main Hero Text */}
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             <h1
-              className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 whitespace-nowrap ${darkMode ? 'text-white' : 'text-slate-800'}`}
-              style={{ fontFamily: 'Orbitron, monospace' }}
+              className={`text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 whitespace-nowrap ${darkMode ? 'text-white' : 'text-slate-800'}`}
+              style={{ fontFamily: 'Orbitron, monospace', transform: 'scale(1)', transformOrigin: 'center' }}
             >
               {"Clement Raymond".split("").map((char, index) => (
                 <motion.span
