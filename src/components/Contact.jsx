@@ -109,7 +109,14 @@ const Contact = () => {
                   <div className="flex space-x-4">
                     {socialLinks.map((social, idx) => (
                       <motion.a key={idx} href={social.href} target="_blank" rel="noopener noreferrer"
-                        className={`p-3 rounded-lg border ${darkMode ? 'bg-black/40 border-cyan-500 text-gray-400' : 'bg-white/20 border-gray-400 text-black'} ${social.color} transition-all duration-300`} whileHover={{ scale: 1.1, rotate: 10 }} whileTap={{ scale: 0.9 }}>
+                        className={`p-3 rounded-full border transition-all duration-300 ${
+                          darkMode 
+                            ? 'border-cyan-400/30 hover:shadow-[0_0_15px_rgba(34,211,238,0.7)] text-cyan-400' 
+                            : 'border-gray-400/30 hover:shadow-[0_0_15px_rgba(107,114,128,0.7)] text-gray-700'
+                        }`} 
+                        whileHover={{ scale: 1.1, rotate: 10 }} 
+                        whileTap={{ scale: 0.9 }}
+                      >
                         <social.Icon className="w-5 h-5" />
                       </motion.a>
                     ))}

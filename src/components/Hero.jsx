@@ -105,7 +105,7 @@ const Hero = () => {
           {/* Main Hero Text */}
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             <h1
-              className={`text-6xl md:text-8xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-slate-800'}`}
+              className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-slate-800'}`}
               style={{ fontFamily: 'Orbitron, monospace' }}
             >
               {"Clement Raymond".split("").map((char, index) => (
